@@ -7,6 +7,11 @@
   gap: 1rem;
   padding: 2rem;
   text-align: center;
+  color: #000;
+}
+
+.page h1 {
+  color: #000;
 }
 
 .counter {
@@ -15,6 +20,7 @@
   border: 1px solid #333;
   border-radius: 8px;
   background: #fff;
+  color: #000;
   cursor: pointer;
 }
 
