@@ -1,24 +1,27 @@
+import valentinesImage from '../assets/Valentines.png'
+import boardGamesImage from '../assets/Board Games.png'
+import winterTreesImage from '../assets/Winter Trees.png'
 const pastEvents = [
   {
     id: 'p1',
-    name: 'First Year Meetup',
-    date: '2026-02-03',
-    location: 'Union South',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
+    name: 'Valentines Make-a-thon',
+    date: '02-13-2026',
+    location: 'Makerspace',
+    image: valentinesImage,
   },
   {
     id: 'p2',
-    name: 'Winter Involvement Expo',
-    date: '2026-01-20',
-    location: 'Kohl Center',
-    image: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1200&q=80',
+    name: 'Board Games & Bites',
+    date: '03-20-2026',
+    location: 'Wendt Commons',
+    image: boardGamesImage,
   },
   {
     id: 'p3',
-    name: 'Community Service Day',
-    date: '2025-11-14',
-    location: 'Goodman Community Center',
-    image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1200&q=80',
+    name: 'Winter Trees',
+    date: '12-05-2025',
+    location: 'Wendt Commons',
+    image: winterTreesImage,
   },
 ]
 

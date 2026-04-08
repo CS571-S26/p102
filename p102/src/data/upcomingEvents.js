@@ -9,6 +9,14 @@ const upcomingEvents = [
     location: 'Wendt 318',
     image: potPaintingAndOrigamiImage,
   },
+  {
+    id: 'u2',
+    name: 'Bandana Dyeing',
+    date: '05-01-2026',
+    time: '2.30 - 4:30 PM',
+    location: 'Allen Centennial Garden',
+    image: '',
+  },
 ]
 
 export default upcomingEvents

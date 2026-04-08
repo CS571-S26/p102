@@ -1,17 +1,49 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Card, Col, Row } from 'react-bootstrap'
 
-function EventCardsSection({ events }) {
+function EventCardsSection({ events, getEventLink }) {
+  const [failedImages, setFailedImages] = useState({})
+
+  const markImageFailed = (eventId) => {
+    setFailedImages((current) => ({ ...current, [eventId]: true }))
+  }
+
   return (
     <div className="events-section">
       <Row className="g-4 justify-content-center">
-        {events.map((eventItem) => (
-          <Col key={eventItem.id} xs={12} md={6} lg={4} className="d-flex">
+        {events.map((eventItem) => {
+          const imageAltText = eventItem.imageAlt || `${eventItem.name} event image`
+          const showImage = Boolean(eventItem.image) && !failedImages[eventItem.id]
+          const eventLink = getEventLink ? getEventLink(eventItem) : null
+
+          return (
+          <Col key={eventItem.id} xs={12} md={6} lg={4} className="d-flex" id={`event-${eventItem.id}`}>
             <Card className="event-card w-100">
-              <Card.Img variant="top" src={eventItem.image} alt={eventItem.name} className="event-image" />
+              {showImage ? (
+                <Card.Img
+                  variant="top"
+                  src={eventItem.image}
+                  alt={imageAltText}
+                  className="event-image"
+                  onError={() => markImageFailed(eventItem.id)}
+                />
+              ) : (
+                <div className="event-image event-image-fallback" role="img" aria-label={imageAltText}>
+                  {imageAltText}
+                </div>
+              )}
               <Card.Body>
                 <Card.Title>{eventItem.name}</Card.Title>
                 <Card.Text className="event-meta">
-                  <strong>Date:</strong> {eventItem.date}
+                  <strong>Date:</strong>{' '}
+                  {eventLink ? (
+                    <Link to={eventLink} className="event-date-link-plain">
+                      {eventItem.date}
+                    </Link>
+                  ) : (
+                    eventItem.date
+                  )}
                 </Card.Text>
                 {eventItem.time && (
                   <Card.Text className="event-meta">
@@ -24,7 +56,8 @@ function EventCardsSection({ events }) {
               </Card.Body>
             </Card>
           </Col>
-        ))}
+          )
+        })}
       </Row>
     </div>
   )
