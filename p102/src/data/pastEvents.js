@@ -8,6 +8,8 @@ const pastEvents = [
     date: '02-13-2026',
     location: 'Makerspace',
     image: valentinesImage,
+    // gallery: array of { src, alt } objects — add photos here when available
+    gallery: [],
   },
   {
     id: 'p2',
@@ -15,6 +17,7 @@ const pastEvents = [
     date: '03-20-2026',
     location: 'Wendt Commons',
     image: boardGamesImage,
+    gallery: [],
   },
   {
     id: 'p3',
@@ -22,6 +25,7 @@ const pastEvents = [
     date: '12-05-2025',
     location: 'Wendt Commons',
     image: winterTreesImage,
+    gallery: [],
   },
 ]
 

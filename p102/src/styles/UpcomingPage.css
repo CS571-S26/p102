@@ -1,0 +1,106 @@
+.countdown-banner {
+  margin: 1.2rem auto 0;
+  max-width: 600px;
+  background: var(--panel-bg);
+  border: 2px solid #b91c1c;
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(185, 28, 28, 0.1);
+  position: relative;
+  z-index: 0;
+}
+
+.countdown-label {
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.countdown-event-sub {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b91c1c;
+}
+
+.countdown-event-name {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.countdown-tiles {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #b91c1c;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 0.9rem;
+  min-width: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.countdown-unit {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+  opacity: 0.85;
+}
+
+.event-volunteer-link {
+  color: #b91c1c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.event-volunteer-link:hover {
+  text-decoration: underline;
+}
+
+.event-volunteer-placeholder {
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 0.88rem;
+}
+
+.event-gallery-btn {
+  display: block;
+  width: 100%;
+  margin-top: 0.85rem;
+  padding: 0.5rem;
+  border: 1.5px solid #b91c1c;
+  border-radius: 8px;
+  background: transparent;
+  color: #b91c1c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.event-gallery-btn:hover {
+  background: #b91c1c;
+  color: #fff;
+}

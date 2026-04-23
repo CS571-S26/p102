@@ -111,7 +111,7 @@ body {
   line-height: 1.1;
 }
 
-.page-content p {
+.page-content > p {
   margin: 1.15rem auto 0;
   max-width: 65ch;
   font-size: clamp(0.92rem, 1.4vw, 1.1rem);
@@ -166,6 +166,21 @@ body {
   text-align: left;
 }
 
+.calendar-semester-group {
+  margin-bottom: 2rem;
+}
+
+.calendar-semester-heading {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  color: #b91c1c;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #fecdd3;
+}
+
 .calendar-list {
   list-style: none;
   margin: 0;
@@ -204,7 +219,8 @@ body {
   font-size: clamp(0.85rem, 1.3vw, 1.02rem);
 }
 
-.calendar-details h2 {
+.calendar-details h2,
+.calendar-details h3 {
   margin: 0;
   font-size: clamp(1rem, 1.6vw, 1.3rem);
   line-height: 1.2;

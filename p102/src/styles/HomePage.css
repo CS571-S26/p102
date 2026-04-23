@@ -1,0 +1,41 @@
+.home-quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home-quicklink-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: clamp(200px, 28%, 280px);
+  padding: 1.4rem 1.2rem;
+  border-radius: 14px;
+  background: var(--panel-bg);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-quicklink-card:hover {
+  border-color: #b91c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(185, 28, 28, 0.15);
+  color: inherit;
+}
+
+.home-quicklink-label {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #b91c1c;
+}
+
+.home-quicklink-desc {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.5;
+}

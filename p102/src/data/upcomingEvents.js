@@ -8,6 +8,7 @@ const upcomingEvents = [
     time: '3.30 - 5:30 PM',
     location: 'Wendt 318',
     image: potPaintingAndOrigamiImage,
+    volunteerLink: '',
   },
   {
     id: 'u2',
@@ -16,6 +17,7 @@ const upcomingEvents = [
     time: '2.30 - 4:30 PM',
     location: 'Allen Centennial Garden',
     image: '',
+    volunteerLink: '',
   },
 ]
 

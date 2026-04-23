@@ -1,0 +1,163 @@
+/* ── Mission ── */
+.about-mission {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.about-body-text {
+  font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+  line-height: 1.75;
+  color: #374151;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0.85rem;
+  text-align: left;
+  width: 100%;
+}
+
+.about-body-text p {
+  margin: 0 0 1rem;
+}
+
+.about-body-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-body-text--center {
+  text-align: center;
+}
+
+/* ── Leadership ── */
+.about-leadership {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.about-leadership h2,
+.about-highlights h2 {
+  color: #111827;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.about-leader-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+}
+
+.about-leader-photo-placeholder {
+  flex-shrink: 0;
+  width: 160px;
+  height: 190px;
+  border-radius: 12px;
+  background: #fecdd3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7f1d1d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  border: 2px dashed #b91c1c;
+}
+
+/* once real photo is added, same size as placeholder */
+.about-leader-img {
+  width: 160px;
+  height: 190px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-leader-info h3 {
+  margin: 0 0 0.3rem;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: #111827;
+}
+
+.about-leader-role {
+  margin: 0 0 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b91c1c;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.about-leader-info p {
+  margin: 0.7rem 0 0;
+  font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+  line-height: 1.65;
+  color: #374151;
+}
+
+/* ── Event Highlights ── */
+.about-highlights {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.about-highlight-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  aspect-ratio: 3 / 4;
+  background: #fecdd3;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-highlight-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(185, 28, 28, 0.18);
+}
+
+.about-highlight-figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-highlight-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.about-highlight-link:hover .about-highlight-img {
+  transform: scale(1.04);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .about-leader-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Col, Row } from 'react-bootstrap'
 
-function EventCardsSection({ events, getEventLink }) {
+function EventCardsSection({ events, getEventLink, showVolunteerLink, onGalleryOpen }) {
   const [failedImages, setFailedImages] = useState({})
 
   const markImageFailed = (eventId) => {
@@ -53,6 +53,28 @@ function EventCardsSection({ events, getEventLink }) {
                 <Card.Text className="event-meta mb-0">
                   <strong>Location:</strong> {eventItem.location}
                 </Card.Text>
+
+                {showVolunteerLink && (
+                  <Card.Text className="event-meta mt-2 mb-0">
+                    {eventItem.volunteerLink ? (
+                      <a href={eventItem.volunteerLink} target="_blank" rel="noreferrer" className="event-volunteer-link">
+                        Volunteer for this event →
+                      </a>
+                    ) : (
+                      <span className="event-volunteer-placeholder">Volunteer sign-up coming soon</span>
+                    )}
+                  </Card.Text>
+                )}
+
+                {onGalleryOpen && (
+                  <button
+                    type="button"
+                    className="event-gallery-btn"
+                    onClick={() => onGalleryOpen(eventItem.id)}
+                  >
+                    View Photos
+                  </button>
+                )}
               </Card.Body>
             </Card>
           </Col>
