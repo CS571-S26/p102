@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import PageContent from '../components/PageContent'
+import CountdownBanner from '../components/CountdownBanner'
 import EventCardsSection from '../components/EventCardsSection'
 import upcomingEvents from '../data/upcomingEvents'
 import '../styles/UpcomingPage.css'
@@ -58,22 +59,7 @@ function UpcomingPage() {
 
   return (
     <PageContent title="Upcoming Events">
-      {nextEvent && countdown && (
-        <div className="countdown-banner" aria-live="polite">
-          <div className="countdown-label">
-            <span className="countdown-event-sub">Next Event</span>
-            <strong className="countdown-event-name">{nextEvent.name}</strong>
-          </div>
-          <div className="countdown-tiles">
-            {[['Days', countdown.days], ['Hours', countdown.hours], ['Mins', countdown.minutes], ['Secs', countdown.seconds]].map(([unit, val]) => (
-              <div key={unit} className="countdown-tile">
-                <span className="countdown-value">{String(val).padStart(2, '0')}</span>
-                <span className="countdown-unit">{unit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <CountdownBanner nextEvent={nextEvent} countdown={countdown} />
       <EventCardsSection
         events={activeEvents}
         getEventLink={(eventItem) => `/calender?event=${eventItem.id}`}

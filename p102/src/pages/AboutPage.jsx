@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import darylPhoto from '../assets/me.jpeg'
 import valentinesImage from '../assets/Valentines.png'
 import boardGamesImage from '../assets/Board Games.png'
 import winterTreesImage from '../assets/Winter Trees.png'
@@ -53,10 +54,7 @@ function AboutPage() {
       <section className="about-leadership">
         <h2>Our Leadership</h2>
         <div className="about-leader-card">
-          <div className="about-leader-photo-placeholder" aria-label="Photo of Daryl Prem — coming soon">
-            {/* Replace this div with: <img src={darylPhoto} alt="Daryl Prem, VP of Recruitment and Engagement" className="about-leader-img" /> */}
-            <span>Photo Coming Soon</span>
-          </div>
+          <img src={darylPhoto} alt="Daryl Prem, VP of Recruitment and Engagement" className="about-leader-img" />
           <div className="about-leader-info">
             <h3>Daryl Prem</h3>
             <p className="about-leader-role">VP of Recruitment &amp; Engagement — WESC</p>

@@ -1,6 +1,11 @@
 import valentinesImage from '../assets/Valentines.png'
 import boardGamesImage from '../assets/Board Games.png'
 import winterTreesImage from '../assets/Winter Trees.png'
+import gamesGalleryImage from '../assets/games.png'
+import treeGalleryImage from '../assets/tree.png'
+import valGalleryImage from '../assets/val.png'
+import val1GalleryImage from '../assets/val 1.png'
+
 const pastEvents = [
   {
     id: 'p1',
@@ -8,8 +13,10 @@ const pastEvents = [
     date: '02-13-2026',
     location: 'Makerspace',
     image: valentinesImage,
-    // gallery: array of { src, alt } objects — add photos here when available
-    gallery: [],
+    gallery: [
+      { src: valGalleryImage, alt: 'Students crafting valentines together during Valentines Make-a-thon' },
+      { src: val1GalleryImage, alt: 'Valentines Make-a-thon activity setup and student creations' },
+    ],
   },
   {
     id: 'p2',
@@ -17,7 +24,9 @@ const pastEvents = [
     date: '03-20-2026',
     location: 'Wendt Commons',
     image: boardGamesImage,
-    gallery: [],
+    gallery: [
+      { src: gamesGalleryImage, alt: 'Students playing board games together at Board Games and Bites' },
+    ],
   },
   {
     id: 'p3',
@@ -25,7 +34,9 @@ const pastEvents = [
     date: '12-05-2025',
     location: 'Wendt Commons',
     image: winterTreesImage,
-    gallery: [],
+    gallery: [
+      { src: treeGalleryImage, alt: 'Decorated winter trees created by students at the event' },
+    ],
   },
 ]
 
